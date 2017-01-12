@@ -24,6 +24,7 @@ var FB_PAGE_ACCESS_TOKEN = "EAAOFPm9yeWcBAKMf0SHcRvsZAiLkVmVkgmZAC6Ln3rAq4sIGFbA
 
 
 var conversation = watson.conversation({
+  console.log('Initialising conversation');
   username: 'fbba1498-14f4-43b3-9a41-cfbc2cf6d730',
   password: 'op10GE3Ku8bn',
   version: 'v1',
@@ -42,6 +43,7 @@ var conversation = new ConversationV1({
 });*/
 
 conversation.message({
+  console.log('Started conversation');
   workspace_id: '25dfa8a0-0263-471b-8980-317e68c30488',
   input: {'text': 'Turn on the lights'},
   context: 'Hi'
