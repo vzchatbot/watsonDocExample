@@ -2,6 +2,21 @@
 // receives response.
 
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+var express = require('express');
+var bodyParser = require('body-parser');
+var uuid = require('node-uuid');
+var request = require('request');
+var JSONbig = require('json-bigint');
+var async = require('async');
+var log4js = require('log4js');
+var fs = require('fs');
+var util = require('util');
+
+var session = require('express-session');
+var sql = require('mssql');
+
+var FB_VERIFY_TOKEN = "CAA30DE7-CC67-4CBA-AF93-2B1C5C4C19D4";
+var FB_PAGE_ACCESS_TOKEN = "EAAOFPm9yeWcBAKMf0SHcRvsZAiLkVmVkgmZAC6Ln3rAq4sIGFbANrjuiGBplPjJj1JBQcVyQWwwMJMuSk3uCd01vxbVqrV1PxmoEWeBx0LRcVCUzmGY7D535wJO2ZB0iagBlSNjPZClrKSZCjaHcjDriF0pNPA2SfTvcunBSupgZDZD";
 
 // Set up Conversation service wrapper.
 var conversation = new ConversationV1({
