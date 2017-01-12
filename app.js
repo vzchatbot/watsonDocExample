@@ -22,7 +22,7 @@ var FB_PAGE_ACCESS_TOKEN = "EAAOFPm9yeWcBAKMf0SHcRvsZAiLkVmVkgmZAC6Ln3rAq4sIGFbA
 var conversation = new ConversationV1({
   username: 'fbba1498-14f4-43b3-9a41-cfbc2cf6d730', // replace with username from service key
   password: 'op10GE3Ku8bn', // replace with password from service key
-  path: { workspace_id: '09ff5ce1-a4b8-451b-8929-77371f7b99ef' }, // replace with workspace ID
+  path: { workspace_id: '5f19b64f-396a-4838-a433-345f476e456c' }, // replace with workspace ID
   version_date: '2017-01-11'
 });
 
