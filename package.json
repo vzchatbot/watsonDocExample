@@ -27,8 +27,8 @@
     "mssql": "^2.1.2",
     "underscore": "^1.8.3",
     "mocha": "^2.2.4",
-    "superagent": "^1.2.0"
-    "": ""
+    "superagent": "^1.2.0",
+    "watson-developer-cloud": "^1.0.0"
   },
   "repository": {
     "type": "git",
