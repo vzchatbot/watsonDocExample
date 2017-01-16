@@ -1,7 +1,12 @@
 // Example 1: sets up service wrapper, sends initial message, and 
 // receives response.
 
+npm install -g localtunnel
+{
+  lt --port 8000
+}
 
+/*
 
 var watson = require('watson-developer-cloud');
 //var ConversationV1 = require('watson-developer-cloud/conversation/v1');
@@ -70,3 +75,4 @@ function processResponse(err, response) {
       console.log(response.output.text[0]);
   }
 }*/
+*/
