@@ -1,7 +1,7 @@
 // Example 1: sets up service wrapper, sends initial message, and 
 // receives response.
 
-var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+var ConversationV1 = require('watson-developer-cloud');
 
 // Set up Conversation service wrapper.
 var conversation = new ConversationV1({
