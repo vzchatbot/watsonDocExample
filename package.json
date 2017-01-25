@@ -1,6 +1,6 @@
 {
   "name": "watson-developer-cloud",
-  "version": "2.15.2",
+  "version": "1.0.0",
   "description": "Watson Bot",
   "main": "app.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "underscore": "^1.8.3",
     "mocha": "^2.2.4",
     "superagent": "^1.2.0",
-    "watson-developer-cloud": "^2.15.2"
+    "watson-developer-cloud": "*"
   },
   "repository": {
     "type": "git",
