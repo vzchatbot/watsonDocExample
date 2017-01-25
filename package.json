@@ -1,7 +1,7 @@
 {
-  "name": "api-ai-facebook",
-  "version": "1.0.0",
-  "description": "API.AI Facebook Bot",
+  "name": "watson-developer-cloud",
+  "version": "2.15.2",
+  "description": "Watson Bot",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -10,7 +10,6 @@
   "author": "Danil Skachkov <danil.skachkov@speaktoit.com> (https://api.ai)",
   "license": "ISC",
   "dependencies": {
-    "apiai": "2.0.5",
     "async": "^2.0.0",
     "body-parser": "^1.15.2",
     "express": "^4.13.3",
@@ -28,10 +27,10 @@
     "underscore": "^1.8.3",
     "mocha": "^2.2.4",
     "superagent": "^1.2.0",
-    "watson-developer-cloud": "^1.0.0"
+    "watson-developer-cloud": "^2.15.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/api-ai/api-ai-facebook"
+    "url": "https://github.com/JosephPravin/watsonDocExample/edit/master/package.json"
   }
 }
