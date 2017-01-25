@@ -8,7 +8,7 @@ var conversation = new ConversationV1({
   username: 'fbba1498-14f4-43b3-9a41-cfbc2cf6d730', // replace with username from service key
   password: 'op10GE3Ku8bn', // replace with password from service key
   path: { workspace_id: '09ff5ce1-a4b8-451b-8929-77371f7b99ef' }, // replace with workspace ID
-  version_date: '2016-07-11'
+  version_date: '*'
 });
 
 // Start conversation with empty message.
