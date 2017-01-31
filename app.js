@@ -1,28 +1,13 @@
-// Example 1: sets up service wrapper, sends initial message, and 
-// receives response.
+var express = require('express');  
+var bodyParser = require('body-parser');  
+var request = require('request');  
+var app = express();
 
-var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+app.use(bodyParser.urlencoded({extended: false}));  
+app.use(bodyParser.json());  
+app.listen((process.env.PORT || 3000));
 
-// Set up Conversation service wrapper.
-var conversation = new ConversationV1({
-  username: 'fbba1498-14f4-43b3-9a41-cfbc2cf6d730', // replace with username from service key
-  password: 'op10GE3Ku8bn', // replace with password from service key
-  path: { workspace_id: '09ff5ce1-a4b8-451b-8929-77371f7b99ef' }, // replace with workspace ID
-  version_date: '*'
+// Server frontpage
+app.get('/', function (req, res) {  
+    res.send('This is TestBot Server');
 });
-
-// Start conversation with empty message.
-conversation.message({}, processResponse);
-
-// Process the conversation response.
-function processResponse(err, response) {
-  if (err) {
-    console.error(err); // something went wrong
-    return;
-  }
-  
-  // Display the output from dialog, if any.
-  if (response.output.text.length != 0) {
-      console.log(response.output.text[0]);
-  }
-}
