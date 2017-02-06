@@ -33,6 +33,7 @@ function convMess(message){
     });
 }
 
+convMess('');
 //convMess('Hello');
-convMess('Remind me to meet Robert');
+//convMess('Remind me to meet Robert');
 //convMess('Order me a pizza for lunch');
