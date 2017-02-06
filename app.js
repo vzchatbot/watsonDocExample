@@ -28,7 +28,7 @@ function convMess(message){
             console.log(err)
         }
         else {
-            console.log('Watson: ' + response.output.text.selection_policy);
+            console.log('Watson: ' + response);
         }
     });
 }
