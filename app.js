@@ -1,23 +1,39 @@
-var express = require('express');  
-var bodyParser = require('body-parser');  
-var request = require('request');  
-var app = express();
+var watson = require('watson-developer-cloud');
 
-app.use(bodyParser.urlencoded({extended: false}));  
-app.use(bodyParser.json());  
-app.listen((process.env.PORT || 3000));
 
-// Server frontpage
-app.get('/', function (req, res) {  
-    res.send('This is TestBot Server');
+var conversation = watson.conversation({
+    username: '31be4934-c02e-441a-96e6-d639b4ab69a8',
+    password: 'Q2hapKhopVRj',
+    version: 'v1',
+    version_date: '2016-09-20'
 });
 
+function prompt(question, callback){
+    var stdin=process.stdin,
+        stdout=process.stdout;
+    stdin.resume();
+    stdout.write(question);
+    
+    stdin.once('data', function(data) {
+        callback(data.toString().trim());
+    });
+}
 
-// Facebook Webhook
-app.get('/webhook', function (req, res) {  
-    if (req.query['hub.verify_token'] === 'testbot_verify_token') {
-        res.send(req.query['hub.challenge']);
-    } else {
-        res.send('Invalid verify token');
-    }
-});
+function convMess(message){
+    conversation.message({
+        workspace_id:'b2d3a074-4d46-4b95-b902-f70d0000fdc6',
+        input: {'text':message}
+    }, function(err, response) {
+        if(err) {
+            console.log(err)
+        }
+        else {
+            console.log('Watson: ' + response.output.text[0]);
+            prompt('You: ', function(input){
+                convMess(input);
+            });
+        }
+    });
+}
+
+convMess('Hello');
