@@ -28,10 +28,13 @@ function convMess(message){
             console.log(err)
         }
         else {
-            console.log('I got a response');
-            process.exit(1);
+            console.log('I got a response. Let me check');
+           // process.exit(1);
             //console.log('Watson: ' + response.output.text.selection_policy);
             //console.log('Watson: ' + response);
+            if (response.output.text.length != 0) {
+      console.log(response.output.text[0]);
+  }
         }
     });
 }
