@@ -29,11 +29,10 @@ function convMess(message){
         }
         else {
             console.log('Watson: ' + response.output.text[0]);
-            prompt('You: ', function(input){
-                convMess(input);
-            });
         }
     });
 }
 
 convMess('Hello');
+convMess('Remind me to meet Robert');
+convMess('Order me a pizza for lunch');
