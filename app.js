@@ -28,7 +28,7 @@ function convMess(message){
             console.log(err)
         }
         else {
-            console.log("I got a response");
+            console.log('I got a response');
             process.exit(1);
             //console.log('Watson: ' + response.output.text.selection_policy);
             //console.log('Watson: ' + response);
