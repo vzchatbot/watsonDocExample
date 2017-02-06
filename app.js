@@ -28,7 +28,7 @@ function convMess(message){
             console.log(err)
         }
         else {
-            console.log('Watson: ' + response.output.text.values);
+            console.log('Watson: ' + response.output.text.values[0]);
         }
     });
 }
