@@ -18,19 +18,16 @@ function convMess(message) {
         }
         else {
             console.log('I got a response. Let me check');
-            if (response.intents.length > 0) {
-                console.log('Detected intent: #' + response.intents[0].intent);
-            }
             if (response.output.text.length != 0) {
                 console.log('Watson says:' + response.output.text[0]);
             }
-            var newMessageFromUser = prompt('>> ');
-            convMess(newMessageFromUser);
         }
     });
 }
 
 //convMess('');
 convMess('Hello');
+var newMessageFromUser = prompt('>> ');
+convMess(newMessageFromUser);
 //convMess('Remind me to meet Robert');
 //convMess('Order me a pizza for lunch');
