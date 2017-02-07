@@ -1,7 +1,7 @@
 // Example 2: adds user input and detects intents.
 
 var prompt = require('prompt-sync')();
-var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+var ConversationV1 = require('watson-developer-cloud');
 
 // Set up Conversation service wrapper.
 var conversation = new ConversationV1({
