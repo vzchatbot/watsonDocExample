@@ -26,6 +26,7 @@ function convMess(message) {
 }
 
 //convMess('');
+console.log('You: Hello'); 
 convMess('Hello');
 //convMess('Remind me to meet Robert');
 //convMess('Order me a pizza for lunch');
