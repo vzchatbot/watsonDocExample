@@ -20,7 +20,7 @@ function convMess(message) {
             console.log('I got a response. Let me check');
             if (response.output.text.length != 0) {
                 console.log('Watson says:' + response.output.text[0]);
-                console.log('Watson says:' + response.output.text[1]);
+                //console.log('Watson says:' + response.output.text[1]);
             }
         }
     });
@@ -29,5 +29,6 @@ function convMess(message) {
 //convMess('');
 //console.log('You: Hello'); 
 convMess('Hello');
+convMess('Remind me');
 //convMess('Remind me to meet Robert');
 //convMess('Order me a pizza for lunch');
