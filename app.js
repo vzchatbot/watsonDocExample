@@ -1,4 +1,4 @@
-var watson = require('watson-developer-cloud/conversation/v1');
+var watson = require('watson-developer-cloud');
 
 
 var conversation = watson.conversation({
